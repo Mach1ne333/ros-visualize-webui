@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "fixedFrame": "camera_init",
+  "mode": "3D",
+  "layers": [
+    {
+      "id": "cc428cc9-6162-4d65-94b1-cd3a6fed45d3",
+      "type": "Grid",
+      "name": "Grid",
+      "enabled": true,
+      "topic": "",
+      "properties": {
+        "frame": "",
+        "cellSize": 0.5,
+        "cells": 40,
+        "color": "#344858",
+        "alpha": 1
+      }
+    },
+    {
+      "id": "80a93c87-b10c-4fd3-94a8-6e7ecebdb7ea",
+      "type": "TF",
+      "name": "TF",
+      "enabled": true,
+      "topic": "",
+      "properties": {
+        "showAxes": true,
+        "showNames": true,
+        "length": 0.25,
+        "frames": ""
+      }
+    },
+    {
+      "id": "8a664e43-0232-4271-b0a3-5c955ab0c1b8",
+      "type": "RobotModel",
+      "name": "RobotModel",
+      "enabled": true,
+      "topic": "/robot_description",
+      "properties": {
+        "descriptionResource": "",
+        "visual": true,
+        "collision": false,
+        "alpha": 1
+      }
+    },
+    {
+      "id": "b63bf635-9c77-4c66-888c-bd8bb4ead966",
+      "type": "PointCloud2",
+      "name": "FAST-LIO2 地图",
+      "enabled": true,
+      "topic": "/Laser_map",
+      "properties": {
+        "selectable": true,
+        "style": "Flat Squares",
+        "sizePx": 3,
+        "size": 0.025,
+        "alpha": 1,
+        "decay": 0,
+        "maxPoints": 120000,
+        "positionTransformer": "XYZ",
+        "colorTransformer": "AxisColor",
+        "color": "#ff4b58",
+        "axis": "Z",
+        "channel": "intensity",
+        "rainbow": true,
+        "invert": false,
+        "autoRange": true,
+        "minValue": 0,
+        "maxValue": 2,
+        "minColor": "#2222ff",
+        "maxColor": "#ff3333"
+      }
+    },
+    {
+      "id": "1ef7610e-777e-4c99-8c2f-1935188d5e08",
+      "type": "Path",
+      "name": "Path",
+      "enabled": true,
+      "topic": "/path",
+      "properties": {
+        "lineStyle": "Line",
+        "width": 0.025,
+        "buffer": 1,
+        "color": "#49d8b5",
+        "alpha": 1
+      }
+    },
+    {
+      "id": "58d15e5d-e86b-4e63-9293-9a3d9e7143ea",
+      "type": "Odometry",
+      "name": "Odometry",
+      "enabled": true,
+      "topic": "/Odometry",
+      "properties": {
+        "positionTolerance": 0.1,
+        "angleTolerance": 0.1,
+        "keep": 100,
+        "shape": "Arrow",
+        "length": 0.3,
+        "radius": 0.02,
+        "color": "#49d8b5",
+        "alpha": 1,
+        "covariance": false,
+        "covarianceScale": 2,
+        "covarianceColor": "#f3b768",
+        "covarianceAlpha": 0.25
+      }
+    }
+  ],
+  "cards": {
+    "command": "/cmd_vel",
+    "estimate": "/lio/nav_odom",
+    "stale": 2,
+    "degrees": false
+  }
+}

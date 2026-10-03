@@ -1,0 +1,8 @@
+node_modules/
+frontend/dist/
+frontend/dist-tools/
+.tools/
+__pycache__/
+*.pyc
+*.log
+.env

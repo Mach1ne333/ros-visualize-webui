@@ -1,0 +1,17 @@
+foxglove_bridge:
+  ros__parameters:
+    address: "127.0.0.1"
+    port: 8765
+    capabilities: ["connectionGraph"]
+    client_topic_whitelist: ["(?!)"]
+    service_whitelist: ["(?!)"]
+    param_whitelist: ["(?!)"]
+    topic_whitelist: [".*"]
+    remote_access: false
+    sysinfo: false
+    publish_client_count: false
+    include_hidden: false
+    min_qos_depth: 1
+    max_qos_depth: 10
+    send_buffer_limit: 10000000
+    point_cloud_compression_topic_denylist: [".*"]

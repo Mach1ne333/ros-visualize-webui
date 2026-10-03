@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "fixedFrame": "map",
+  "mode": "2D",
+  "layers": [
+    {
+      "id": "92b32644-5d59-46fb-8651-b35eded00cda",
+      "type": "Grid",
+      "name": "Grid",
+      "enabled": true,
+      "topic": "",
+      "properties": {
+        "frame": "",
+        "cellSize": 0.5,
+        "cells": 40,
+        "color": "#344858",
+        "alpha": 1
+      }
+    },
+    {
+      "id": "906d23ed-f4c3-4bf8-8280-47f4a746febe",
+      "type": "TF",
+      "name": "TF",
+      "enabled": true,
+      "topic": "",
+      "properties": {
+        "showAxes": true,
+        "showNames": true,
+        "length": 0.25,
+        "frames": ""
+      }
+    },
+    {
+      "id": "11ad5056-53ab-424f-b8e5-4a5176b0b0d7",
+      "type": "RobotModel",
+      "name": "RobotModel",
+      "enabled": true,
+      "topic": "/robot_description",
+      "properties": {
+        "descriptionResource": "",
+        "visual": true,
+        "collision": false,
+        "alpha": 1
+      }
+    },
+    {
+      "id": "24b6f91f-4d12-4f23-bff7-0d56dadec662",
+      "type": "Map",
+      "name": "Map",
+      "enabled": true,
+      "topic": "/map",
+      "properties": {
+        "alpha": 1,
+        "drawBehind": true,
+        "scheme": "map"
+      }
+    },
+    {
+      "id": "8b12ab27-a841-4002-8fbf-632eeca464bf",
+      "type": "LaserScan",
+      "name": "LaserScan",
+      "enabled": true,
+      "topic": "/scan",
+      "properties": {
+        "selectable": true,
+        "style": "Flat Squares",
+        "sizePx": 3,
+        "size": 0.025,
+        "alpha": 1,
+        "decay": 0,
+        "maxPoints": 120000,
+        "positionTransformer": "XYZ",
+        "colorTransformer": "FlatColor",
+        "color": "#ff4b58",
+        "axis": "Z",
+        "channel": "intensity",
+        "rainbow": true,
+        "invert": false,
+        "autoRange": true,
+        "minValue": 0,
+        "maxValue": 2,
+        "minColor": "#2222ff",
+        "maxColor": "#ff3333"
+      }
+    },
+    {
+      "id": "17af5e14-9133-4680-a6ef-4ce8a9e8547a",
+      "type": "PoseArray",
+      "name": "PoseArray",
+      "enabled": true,
+      "topic": "/particle_cloud",
+      "properties": {
+        "shape": "Arrow",
+        "length": 0.3,
+        "radius": 0.02,
+        "color": "#49d8b5",
+        "alpha": 1
+      }
+    },
+    {
+      "id": "0cf8971b-d3fe-4b97-8a40-0bf6825b4102",
+      "type": "Path",
+      "name": "Path",
+      "enabled": true,
+      "topic": "/plan",
+      "properties": {
+        "lineStyle": "Line",
+        "width": 0.025,
+        "buffer": 1,
+        "color": "#49d8b5",
+        "alpha": 1
+      }
+    }
+  ],
+  "cards": {
+    "command": "/cmd_vel",
+    "estimate": "/odom",
+    "stale": 2,
+    "degrees": false
+  }
+}
